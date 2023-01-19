@@ -1,8 +1,11 @@
+#include <limits.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
-// #include <iostream>
+#include <string.h>
+#include <time.h>
+
+#define SIZE 7
 
 void print_n(void);
 unsigned long long int factorial(int);
@@ -11,13 +14,15 @@ unsigned long fib(int);
 unsigned long fib_iter(int);
 
 int main(int argc, char *argv[]) {
-    // for (int i = 0; i <= 21; i++) {
-    //     printf("fib(%d) = %lu\n", i, fib(i));
-    // }
+    char string[5] = {'1', '2', '3', '4', '5'};
+    // scanf("%9s", string);
+    printf("%s", "[ ");
+    for (int i = 0; i < 100000; i++) {
+        printf("%c ", string[i]);
+    }
+    printf("%s\n", " ]");
 
-    int i = atoi(argv[1]);
-    // printf("fib(%d) = %lu\n", i, fib_iter(i));
-    printf("factorial(%d) = %llu\n", i, f_iter(i));
+    // printf("%zu\n", strlen(string));
 }
 
 void print_n(void) {
@@ -52,7 +57,7 @@ unsigned long fib_iter(int n) {
     for (int i = 1; i < n; i++) {
         unsigned long temp = a;
         a = b;
-        b += temp;   
+        b += temp;
     }
     return b;
 }

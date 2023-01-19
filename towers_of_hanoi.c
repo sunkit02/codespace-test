@@ -16,3 +16,7 @@ void towers_of_hanio(int disksNum, int initialPeg, int targetPeg, int tempPeg) {
     // Move the n - 1 disks from temp peg to target peg
     towers_of_hanio(disksNum - 1, tempPeg, targetPeg, initialPeg);
 }
+
+void towers_of_hanio_iter(int disksNum, int initialPeg, int targetPeg, int tempPeg) {
+    
+}
